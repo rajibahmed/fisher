@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20160911094410) do
   create_table "catches", force: :cascade do |t|
     t.integer  "user_id"
     t.string   "species"
-    t.decimal  "weight"
+    t.integer  "weight"
     t.integer  "length"
     t.float    "lang"
     t.float    "lat"
