@@ -49,7 +49,6 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
-    cliver (0.3.2)
     concurrent-ruby (1.0.2)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
@@ -91,10 +90,6 @@ GEM
       pkg-config (~> 1.1.7)
     pg (0.18.4)
     pkg-config (1.1.7)
-    poltergeist (1.10.0)
-      capybara (~> 2.1)
-      cliver (~> 0.3.1)
-      websocket-driver (>= 0.2.0)
     puma (3.6.0)
     rack (2.0.1)
     rack-cors (0.4.0)
@@ -184,7 +179,6 @@ DEPENDENCIES
   launchy
   listen (~> 3.0.5)
   pg (~> 0.18)
-  poltergeist
   puma (~> 3.0)
   rack-cors
   rails (~> 5.0.0)

@@ -24,7 +24,6 @@ group :test do
   gem 'shoulda-matchers'
   gem 'timecop'
   gem 'webmock', '1.24.0'
-  gem 'poltergeist'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
