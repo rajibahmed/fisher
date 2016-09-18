@@ -7,6 +7,7 @@ class CatchesController < ApplicationController
     katch = Catch.new(catch_params)
 
     if katch.save
+      katch.create_thumbnails
       render json: katch, status: :created
     else
       render json: Errors.for(:validation_failed, model: katch), status: :unprocessable_entity
