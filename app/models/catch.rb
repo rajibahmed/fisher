@@ -1,3 +1,5 @@
+require 'carrierwave/orm/activerecord'
+
 class Catch < ApplicationRecord
   validates :species, presence: true
   validates :email, presence: true
@@ -6,8 +8,16 @@ class Catch < ApplicationRecord
   validates :lang, presence: true, numericality: true
   validates :lat, presence: true, numericality: true
 
-  def create_thumbnails
+  mount_uploader :fish_photo, PhotoUploader
+
+  def thumb
   end
 
-  handle_asynchronously :create_thumbnails
+  def large
+  end
+
+  def create_images
+  end
+
+  handle_asynchronously :create_images
 end
