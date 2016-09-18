@@ -12,7 +12,7 @@ class ApplicationController < ActionController::API
   end
 
   def check_header
-    request.headers.include?('AUTHORIZATION')
+    request.headers.include?('AUTHORIZATION') and request.headers['AUTHORIZATION'] =~ /^Bearer /
   end
 
   def authenticate
