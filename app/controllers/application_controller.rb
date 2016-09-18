@@ -4,10 +4,10 @@ class ApplicationController < ActionController::API
 
   protected
   def current_user
-    auth_param
+    parsed_email
   end
 
-  def auth_param
+  def parsed_email
     request.headers['AUTHORIZATION'].split(' ')[-1] || ""
   end
 
@@ -20,7 +20,7 @@ class ApplicationController < ActionController::API
   end
 
   def render_unauthorized
-    render json: 'Bad credentials', status: 401
+    render json: Errors.for(:not_authorized), status: :unauthorized
   end
 
 end

@@ -4,7 +4,7 @@ RSpec.describe CatchesController, type: :controller do
   context "GET /catches" do
     it "shows all catches for a user" do
       ca =  create(:catch)
-      get :index
+      get :index,nil,{ 'HTTP_AUTHORIZATION' =>  'Bearer example@gmail.com'}
 
       expect(response_json).not_to be_empty
       expect(response_json.size).to equal(1)
